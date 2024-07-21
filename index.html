@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr />
+            </div>
+            <!-- Replace with your Access Key -->
+            <!-- The Access Key is not a secret API Key. it can be Public and it's safe to use it in the client-side code. It works as an alias to your email address src: https://web3forms.com/-->
+            <input type="hidden" name="access_key" value="ENTER_KEY" />
+            <input type="text" name="name" placeholder="Your name" class="contact-inputs" required />
+            <input type="email" name="Email" placeholder="Your Email" class="contact-inputs" required />
+            <textarea name="message" placeholder="your message" class="contact-inputs" required></textarea>
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none" />
+            <div class="h-captcha" data-captcha="true" data-lang="en"></div>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="contact-right">
+            <img src="https://sleepapp.com/theme/imgs/image-asmr.png" alt="" />
+        </div>
+    </div>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+
+</html>
